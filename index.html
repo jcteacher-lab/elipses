@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analizador Interactivo de Elipses</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <h1>Analizador Interactivo de Elipses</h1>
+  <p>Centro, semiejes, focos, vértices, covértices, excentricidad, lado recto y tabla paramétrica — (x−h)²/a² + (y−k)²/b² = 1</p>
+</header>
+
+<main>
+
+  <section class="panel" aria-labelledby="t-ecuacion">
+    <h2 id="t-ecuacion" class="visually-hidden">Ecuación y vista</h2>
+    <div class="controls">
+      <div>
+        <label for="eq">Ecuación</label>
+        <input id="eq" type="text" value="(x-2)^2/16+(y-1)^2/9=1"
+               placeholder="Ejemplo: (x-2)^2/16+(y-1)^2/9=1" autocomplete="off" spellcheck="false">
+      </div>
+      <div>
+        <label for="xmin">X mínimo</label>
+        <input id="xmin" type="number" value="-4" step="1">
+      </div>
+      <div>
+        <label for="xmax">X máximo</label>
+        <input id="xmax" type="number" value="8" step="1">
+      </div>
+      <div>
+        <button id="analyze" type="button">Analizar elipse</button>
+      </div>
+    </div>
+    <p id="error" class="error" role="alert" hidden></p>
+    <div class="row-buttons">
+      <button id="refit" class="secondary" type="button">Reajustar vista</button>
+      <span class="small">Rueda del ratón = zoom · Arrastrar sobre la gráfica = desplazar</span>
+    </div>
+    <div class="hint">
+      Formatos admitidos: <code>(x-2)^2/16+(y-1)^2/9=1</code> · <code>x^2/25+y^2/9=1</code> ·
+      <code>(x+1)^2+(y-2)^2=4</code> · <code>x^2+y^2=1</code> ·
+      forma general: <code>9x^2+16y^2-18x+64y-71=0</code>
+    </div>
+  </section>
+
+  <section class="panel" aria-label="Deslizadores de parámetros">
+    <div class="sliders">
+      <div class="slider-box">
+        <label for="hs">h = <span id="hv">2</span></label>
+        <input id="hs" type="range" min="-10" max="10" step="0.1" value="2">
+        <div class="small">Centro (X)</div>
+      </div>
+      <div class="slider-box">
+        <label for="ks">k = <span id="kv">1</span></label>
+        <input id="ks" type="range" min="-10" max="10" step="0.1" value="1">
+        <div class="small">Centro (Y)</div>
+      </div>
+      <div class="slider-box">
+        <label for="as">a = <span id="av">4</span></label>
+        <input id="as" type="range" min="0.1" max="10" step="0.1" value="4">
+        <div class="small">Semieje horizontal · a² = <span id="a2v">16</span></div>
+      </div>
+      <div class="slider-box">
+        <label for="bs">b = <span id="bv">3</span></label>
+        <input id="bs" type="range" min="0.1" max="10" step="0.1" value="3">
+        <div class="small">Semieje vertical · b² = <span id="b2v">9</span></div>
+      </div>
+    </div>
+    <p class="small note">Los deslizadores modifican la elipse en tiempo real. Si <b>a = b</b> se obtiene una circunferencia.</p>
+  </section>
+
+  <div class="grid">
+    <section class="panel panel-tight">
+      <canvas id="graph" role="img" aria-label="Gráfica de la elipse con sus focos, vértices y directrices"></canvas>
+    </section>
+
+    <section>
+      <div class="panel">
+        <h2>Forma canónica</h2>
+        <div id="formula" class="formula"></div>
+      </div>
+      <div class="panel">
+        <h2>Interpretación de la traslación</h2>
+        <div id="explanation" class="explain"></div>
+      </div>
+      <div class="panel">
+        <h2>Elementos principales</h2>
+        <div id="cards" class="cards"></div>
+      </div>
+    </section>
+  </div>
+
+  <section class="panel">
+    <h2>Tabla paramétrica · x = h + a·cos θ, &nbsp; y = k + b·sin θ</h2>
+    <div class="scroll"><table id="table"></table></div>
+  </section>
+
+  <section class="panel">
+    <h2>Interpretación geométrica: excentricidad, lado recto y directrices</h2>
+    <div id="geometry" class="explain"></div>
+  </section>
+
+</main>
+
+<footer>Herramienta educativa — análisis de elipses en forma canónica · sin librerías externas</footer>
+
+</body>
+</html>
