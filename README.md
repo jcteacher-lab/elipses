@@ -33,6 +33,7 @@ https://jcteacher-lab.github.io/elipses/
 11. [Posibles extensiones](#11-posibles-extensiones)
 12. [Referencias](#12-referencias)
 13. [Licencia](#13-licencia)
+14. [Proyectos relacionados](#14-proyectos-relacionados)
 
 ---
 
@@ -298,16 +299,16 @@ Los paneles de resultados muestran la forma canónica, la interpretación de la 
 
 ## 8. Instalación y ejecución
 
-No requiere instalación ni servidor.
-
-1. Descarga o clona el repositorio y deja `index.html`, `styles.css` y `app.js` en la misma carpeta.
-2. Abre `index.html` en el navegador (doble clic).
-
-Si prefieres un servidor local:
+1. Descarga o copia el contenido del simulador en un archivo llamado `index.html`.
+2. Ábrelo con doble clic en cualquier navegador moderno (Chrome, Firefox, Edge, Safari).
+3. Listo. No requiere servidor web ni conexión a internet.
 
 ```bash
+git clone https://github.com/jcteacher-lab/elipses.git
+cd elipses
 python3 -m http.server 8000
-# Abre http://localhost:8000
+# Luego abre en tu navegador:
+http://localhost:8000
 ```
 
 Para publicarlo, basta con activar **GitHub Pages** sobre la rama que contiene los tres archivos.
@@ -356,4 +357,30 @@ La aplicación usa Canvas 2D, Pointer Events y sintaxis moderna de JavaScript (o
 
 ## 13. Licencia
 
-Pendiente de definir por el autor. Añade un archivo `LICENSE` con la licencia que elijas (por ejemplo MIT para uso educativo abierto) y actualiza esta sección.
+**Simulador de Elipses**
+
+Copyright (C) 2026
+
+Este programa es **software libre**: puedes redistribuirlo y/o modificarlo bajo los términos de la **GNU General Public License** tal como la publica la Free Software Foundation, ya sea la **versión 3** de la Licencia, o (a tu elección) cualquier versión posterior.
+
+Este programa se distribuye con la esperanza de que sea útil, pero **SIN NINGUNA GARANTÍA**; ni siquiera la garantía implícita de **COMERCIABILIDAD** o **IDONEIDAD PARA UN PROPÓSITO PARTICULAR**. Consulta la GNU General Public License para más detalles.
+
+Deberías haber recibido una copia de la GNU General Public License junto con este programa. Si no es así, consulta <https://www.gnu.org/licenses/>.
+
+
+## 14. Proyectos relacionados
+
+- [Simulador de Tiro Parabólico](https://github.com/jcteacher-lab/tiroparabolico) —
+  Simulador educativo de movimiento de proyectiles con Canvas 2D.
+- [Analizador de parábolas](https://github.com/jcteacher-lab/analizadordeparabolas) —
+  Herramienta didáctica para explorar la parábola: cambia a, h y k con deslizadores y observa cómo se traslada el vértice.
+- [Graficador dinámico de parábolas](https://github.com/jcteacher-lab/Graficador_dinamico_parabolas) —
+  Simulador educativo que construye la **gráfica y la ecuación de una parábola** a partir de sus elementos geométricos.
+- [Simulador del sistema Solar](https://github.com/jcteacher-lab/sistemasolar) —
+  Simulador interactivo del Sistema Solar en un único archivo HTML.
+
+---
+
+**Hecho con ❤️ y con libertad — GPL v3 garantiza que seguirá siendo libre.**
+
+
