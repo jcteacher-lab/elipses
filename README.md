@@ -145,20 +145,20 @@ $$
 
 ## 4. Características de la aplicación
 
-- ✅ Entrada en **forma canónica** y en **forma general**.
-- ✅ **Analizador algebraico**: paréntesis, potencias enteras, fracciones (`1/2`, `x^2/25`), multiplicación implícita (`4x^2`), orden libre de términos, `²`, signos menos tipográficos (`−`, `–`, `—`), `·`/`×`/`*` como producto y coma decimal.
-- ✅ **Completado de cuadrados** automático.
-- ✅ Detección de **circunferencias** ($a=b$) y rechazo explicado de **hipérbolas** y de ecuaciones sin elipse real ($R \le 0$).
-- ✅ **Gráfica** en `<canvas>` con zoom (rueda del ratón), desplazamiento (ratón o dedo, mediante Pointer Events) y rejilla adaptativa.
-- ✅ **Auto-encuadre 1:1**: una circunferencia se dibuja como circunferencia.
-- ✅ Centro, focos, vértices, covértices, ejes mayor y menor, lado recto en cada foco y directrices, con colores diferenciados.
-- ✅ **Deslizadores** para $h$, $k$, $a$, $b$ con actualización en tiempo real.
-- ✅ **Panel pedagógico** de la traslación horizontal y vertical.
-- ✅ **Tabla paramétrica** con 12 valores de $\theta$ ($0^\circ$ a $330^\circ$, cada $30^\circ$).
-- ✅ **Errores en pantalla** (`role="alert"`), sin `alert()` bloqueante.
-- ✅ **Accesibilidad básica**: `<label for>` en controles, `aria-label` en el canvas y `:focus-visible`.
-- ✅ **Redibujado eficiente** con `requestAnimationFrame` durante zoom y desplazamiento.
-- ✅ **Sin dependencias**: HTML + CSS + JavaScript puro, sin servidor.
+- Entrada en **forma canónica** y en **forma general**.
+- **Analizador algebraico**: paréntesis, potencias enteras, fracciones (`1/2`, `x^2/25`), multiplicación implícita (`4x^2`), orden libre de términos, `²`, signos menos tipográficos (`−`, `–`, `—`), `·`/`×`/`*` como producto y coma decimal.
+- **Completado de cuadrados** automático.
+- Detección de **circunferencias** ($a=b$) y rechazo explicado de **hipérbolas** y de ecuaciones sin elipse real ($R \le 0$).
+- **Gráfica** en `<canvas>` con zoom (rueda del ratón), desplazamiento (ratón o dedo, mediante Pointer Events) y rejilla adaptativa.
+- **Auto-encuadre 1:1**: una circunferencia se dibuja como circunferencia.
+- Centro, focos, vértices, covértices, ejes mayor y menor, lado recto en cada foco y directrices, con colores diferenciados.
+- **Deslizadores** para $h$, $k$, $a$, $b$ con actualización en tiempo real.
+- **Panel pedagógico** de la traslación horizontal y vertical.
+- **Tabla paramétrica** con 12 valores de $\theta$ ($0^\circ$ a $330^\circ$, cada $30^\circ$).
+- **Errores en pantalla** (`role="alert"`), sin `alert()` bloqueante.
+- **Accesibilidad básica**: `<label for>` en controles, `aria-label` en el canvas y `:focus-visible`.
+- **Redibujado eficiente** con `requestAnimationFrame` durante zoom y desplazamiento.
+- **Sin dependencias**: HTML + CSS + JavaScript puro, sin servidor.
 
 ---
 
